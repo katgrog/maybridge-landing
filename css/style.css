@@ -147,10 +147,6 @@ body {
 /* Breakpoints */
 
 @media (max-width: 900px) {
-  body {
-    background-position: 1000px;
-  }
-
   .holding-message {
     width: 100%;
     padding: 10px 0;
