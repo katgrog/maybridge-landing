@@ -1,0 +1,173 @@
+/* MAYBRIDGE: Landing Page*/
+
+
+/* Maybridge fonts */
+
+@font-face {
+  font-family: 'gotham-light';
+  src: url('../fonts/gotham-light.eot');
+  src: url('../fonts/gotham-light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gotham-light.woff2') format('woff2'),
+       url('../fonts/gotham-light.woff') format('woff'),
+       url('../fonts/gotham-light.ttf')  format('truetype'),
+       url('../fonts/gotham-light.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'gotham-book';
+  src: url('../fonts/gotham-book.eot');
+  src: url('../fonts/gotham-book.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gotham-book.woff2') format('woff2'),
+       url('../fonts/gotham-book.woff') format('woff'),
+       url('../fonts/gotham-book.ttf')  format('truetype'),
+       url('../fonts/gotham-book.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family : 'opensans-light';
+  src: url('../fonts/opensans-light.eot');
+  src: url('../fonts/opensans-light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/opensans-light.woff2') format('woff2'),
+       url('../fonts/opensans-light.woff') format('woff'),
+       url('../fonts/opensans-light.ttf')  format('truetype'),
+       url('../fonts/opensans-light.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family : 'opensans-bold';
+  src: url('../fonts/opensans-bold.eot');
+  src: url('../fonts/opensans-bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/opensans-bold.woff2') format('woff2'),
+       url('../fonts/opensans-bold.woff') format('woff'),
+       url('../fonts/opensans-bold.ttf')  format('truetype'),
+       url('../fonts/opensans-bold.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family : 'opensans-semibold';
+  src: url('../fonts/opensans-semibold.eot');
+  src: url('../fonts/opensans-semibold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/opensans-semibold.woff2') format('woff2'),
+       url('../fonts/opensans-semibold.woff') format('woff'),
+       url('../fonts/opensans-semibold.ttf')  format('truetype'),
+       url('../fonts/opensans-semibold.svg#svgFontName') format('svg');
+}
+
+
+/* Base styles */
+
+body {
+  background-color: #ffffff;
+  background: url('../images/maybridge-pattern.svg');
+  background-position: -2000px;
+  background-repeat: no-repeat;
+
+  text-align: center;
+  font-family: 'gotham-light', sans-serif;
+  color: #3C3B39;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+}
+
+
+/* Holding page */
+
+.holding-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.holding-content__heading {
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  font-size: 30px;
+  margin-bottom: 60px;
+
+  font-family: 'gotham-book', sans-serif;
+}
+
+.holding-content {
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 0.7s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.holding-message {
+  width: 60%;
+  margin: 0 auto;
+  align-self: flex-end;
+
+  background-color: #7A7870;
+  padding: 5px 50px;
+
+  font-family: 'opensans-light';
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.holding-emphasis {
+  font-family: 'opensans-bold';
+}
+
+.footer {
+  padding: 50px 0;
+}
+
+.footer__contact-link {
+  font-family: 'opensans-light', sans-serif;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: #7A7870;
+  transition: all 0.7s;
+}
+
+.footer__contact-link:hover {
+  color: #D0BC73;
+}
+
+
+/* CSS Animations */
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* Breakpoints */
+
+@media (max-width: 900px) {
+  body {
+    background-position: 1000px;
+  }
+
+  .holding-message {
+    width: 100%;
+    padding: 10px 0;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 600px) {
+  .holding-content__heading {
+    font-size: 24px;
+  }
+
+  .holding-message {
+    font-size: 12px;
+  }
+
+  .holding-message p {
+    padding: 0 20px;
+  }
+}
